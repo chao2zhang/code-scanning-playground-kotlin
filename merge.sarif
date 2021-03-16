@@ -1,0 +1,44 @@
+{
+  "$schema" : "https://raw.githubusercontent.com/oasis-tcs/sarif-spec/master/Schemata/sarif-schema-2.1.0.json",
+  "version" : "2.1.0",
+  "runs" : [ {
+    "tool" : {
+      "driver" : {
+        "guid" : "022ca8c2-f6a2-4c95-b107-bb72c43263f3",
+        "name" : "detekt",
+        "organization" : "detekt",
+        "fullName" : "detekt",
+        "version" : "1.16.0",
+        "semanticVersion" : "1.16.0",
+        "downloadUri" : "https://github.com/detekt/detekt/releases/download/v1.16.0/detekt",
+        "informationUri" : "https://detekt.github.io/detekt",
+        "rules" : [{
+          "id" : "detekt.style.FunctionOnlyReturningConstant",
+          "name" : "FunctionOnlyReturningConstant",
+          "shortDescription" : {
+            "text" : "A function that only returns a constant is misleading. Consider declaring a constant instead"
+          },
+          "helpUri" : "https://detekt.github.io/detekt/style.html#functiononlyreturningconstant"
+        }],
+        "language" : "en"
+      }
+    },
+    "results" : [ {
+      "ruleId" : "detekt.style.FunctionOnlyReturningConstant",
+      "message" : {
+        "text" : "a is returning a constant. Prefer declaring a constant instead."
+      },
+      "locations" : [ {
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "/Users/cazhang/code-scanning-playground-kotlin/library-kotlin/src/main/java/com/ncorti/kotlin/template/library/FactorialCalculator.kt"
+          },
+          "region" : {
+            "startLine" : 12,
+            "startColumn" : 9
+          }
+        }
+      } ]
+    } ]
+  } ]
+}
