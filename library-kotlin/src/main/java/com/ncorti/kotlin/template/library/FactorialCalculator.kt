@@ -10,5 +10,6 @@ object FactorialCalculator {
             else -> computeFactorial(input - 1, temp * input)
         }
 
+
     fun a() = 42
 }
