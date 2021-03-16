@@ -19,6 +19,10 @@ allprojects {
     }
 }
 
+val reportMerge by tasks.registering(io.gitlab.arturbosch.detekt.report.ReportMergeTask::class) {
+    output.set(rootProject.buildDir.resolve("reports/detekt/merge.sarif"))
+}
+
 subprojects {
     apply {
         plugin("io.gitlab.arturbosch.detekt")
@@ -40,11 +44,20 @@ subprojects {
     }
 
     detekt {
-        config = rootProject.files("config/detekt/detekt.yml")
+        buildUponDefaultConfig = true
         reports {
-            html {
-                enabled = true
-                destination = file("build/reports/detekt.html")
+            sarif.enabled = true
+            html.enabled = false
+            xml.enabled = false
+            txt.enabled = false
+        }
+    }
+
+    plugins.withType(io.gitlab.arturbosch.detekt.DetektPlugin::class) {
+        tasks.withType(io.gitlab.arturbosch.detekt.Detekt::class) detekt@{
+            finalizedBy(reportMerge)
+            reportMerge.configure {
+                input.from(this@detekt.sarifReportFile)
             }
         }
     }
