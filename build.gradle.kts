@@ -44,7 +44,7 @@ subprojects {
     }
 
     detekt {
-        basePath = rootProject.path
+        basePath = rootDir.absolutePath
         buildUponDefaultConfig = true
         reports {
             sarif.enabled = true

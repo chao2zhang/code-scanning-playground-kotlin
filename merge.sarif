@@ -25,7 +25,7 @@
     },
     "originalUriBaseIds" : {
       "%SRCROOT%" : {
-        "uri" : "file:///Users/cazhang/.gradle/daemon/6.8.2/:/"
+        "uri" : "file:///Users/cazhang/code-scanning-playground-kotlin/"
       }
     },
     "results" : [ {
@@ -36,7 +36,7 @@
       "locations" : [ {
         "physicalLocation" : {
           "artifactLocation" : {
-            "uri" : "../../../../code-scanning-playground-kotlin/library-kotlin/src/main/java/com/ncorti/kotlin/template/library/FactorialCalculator.kt",
+            "uri" : "library-kotlin/src/main/java/com/ncorti/kotlin/template/library/FactorialCalculator.kt",
             "uriBaseId" : "%SRCROOT%"
           },
           "region" : {
