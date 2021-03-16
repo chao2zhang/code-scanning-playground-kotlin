@@ -12,15 +12,20 @@
         "semanticVersion" : "1.16.0",
         "downloadUri" : "https://github.com/detekt/detekt/releases/download/v1.16.0/detekt",
         "informationUri" : "https://detekt.github.io/detekt",
-        "rules" : [{
+        "rules" : [ {
           "id" : "detekt.style.FunctionOnlyReturningConstant",
           "name" : "FunctionOnlyReturningConstant",
           "shortDescription" : {
             "text" : "A function that only returns a constant is misleading. Consider declaring a constant instead"
           },
           "helpUri" : "https://detekt.github.io/detekt/style.html#functiononlyreturningconstant"
-        }],
+        } ],
         "language" : "en"
+      }
+    },
+    "originalUriBaseIds" : {
+      "%SRCROOT%" : {
+        "uri" : "file:///Users/cazhang/.gradle/daemon/6.8.2/:/"
       }
     },
     "results" : [ {
@@ -31,7 +36,8 @@
       "locations" : [ {
         "physicalLocation" : {
           "artifactLocation" : {
-            "uri" : "/Users/cazhang/code-scanning-playground-kotlin/library-kotlin/src/main/java/com/ncorti/kotlin/template/library/FactorialCalculator.kt"
+            "uri" : "../../../../code-scanning-playground-kotlin/library-kotlin/src/main/java/com/ncorti/kotlin/template/library/FactorialCalculator.kt",
+            "uriBaseId" : "%SRCROOT%"
           },
           "region" : {
             "startLine" : 12,
